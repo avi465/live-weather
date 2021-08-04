@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <!-- top bar -->
+            <div id="topbar">
+                <div>
+                    <h3 id="myStatus">
+                        <%= myStatus %>
+                    </h3>
+                    <p id="error"></p>
+                </div>
+                <div id="location">
+                    <button onclick="getLocation()"><span class="material-icons-outlined">my_location</span></button>
+                </div>
+            </div>
+            <!-- middle Part -->
+            <div id="middle">
+                <hr>
+                <div id="currentWeather">
+                    <div id="curw1">
+                        <div>
+                            <%= currentDescription %>
+                        </div>
+                        <div>
+                            <%= currentTemp %>&deg;c
+                        </div>
+                    </div>
+                    <div id="curw2"><img src="<%= currentIcon %>" alt=""></div>
+                </div>
+                <div id="forcast">
+
+                    <% for(let i=0, j=0; i<5; i++, j=j+4){ %>
+                        <div>
+                            <div>
+                                <%= weather[j] %>
+                            </div>
+                            <div><span><img src="<%= weather[j+1] %>" alt=""></span></div>
+                            <div>
+                                <%= weather[j+2] %> &deg;c
+                            </div>
+                            <div>
+                                <%= weather[j+3] %> &deg;c
+                            </div>
+                        </div>
+                        <%}%>
+                </div>
+                <hr>
+            </div>
+            <!-- footer -->
+            <footer>
+            </footer>
+        </div>
+    </div>
+</body>
+
+<script src="js/index.js"></script>
+
+</html>

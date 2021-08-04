@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+body{
+    background: #161616;
+    color: rgb(255, 255, 255);
+}
+#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 90vw;
+    height: 90vh;
+    padding: 16px;
+    overflow: hidden;
+    text-align: center;
+	border-radius: 15px;
+    transform: translate(-50%, -50%);
+    box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-left: 1px solid rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.1);
+	backdrop-filter: blur(5px);
+}
+#container::before{
+    content: "Live Weather";
+    background: rgba(255,255,255,0.05);
+    display: block;
+    color: rgba(21, 255, 0, 0.986);
+    margin-bottom: 2vh;
+}
+
+body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#f00, #f0F);
+	clip-path: circle(30% at  88% 77%);
+}
+body::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#2196f3, #e91e63);
+	clip-path: circle(20% at 15% 15%);
+}
+
+
+#topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#location span{
+    color: #8ab4f8;
+}
+#location button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3c4043;
+    padding: 4px;
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
+}
+#topbar div:nth-of-type(1){
+    margin-left: 4vw;
+    text-align: left;
+}
+#topbar div:nth-of-type(2){
+    margin-right: 4vw;
+}
+#error{
+    font-family: monospace;
+    background: rgba(255,255,255,0.05);
+    color: rgba(21, 255, 0, 0.986);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+
+/* Middle part */
+#middle{
+    margin-top: 20px;
+    color: white;
+}
+#currentWeather{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+#curw1{
+    margin-left: 2vw;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#curw2{
+    margin-right: 2vw;
+
+}
+#currentWeater div div:nth-of-type(1){
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: 100;
+
+}
+#currentWeather div div:nth-of-type(2) {
+    font-size: 30px;
+}
+#forcast{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2vh;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#forcast::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* footer */
+footer{
+    background: rgba(255,255,255,0.05);
+    border: 2px;
+    padding: 4px;
+    margin-top: 2vh;
+}
+footer::before{
+    content: "Made by Avinash";
+    font-family: monospace;
+    font-weight: 600;
+}
+hr{
+    background-color: white;
+    border: none;
+}
+
+
+/* Media queries */
+@media only screen and (min-width: 1040px){
+    #container{
+        width: 67vw;
+        height: 85vh;
+    }
+}
+@media only screen and (min-width: 1150px){
+    #container{
+        width: 60vw;
+        height: 85vh;
+    }
+}
+@media only screen and (min-width: 900px){
+    #container{
+        width: 80vw;
+        height: 85vh;
+    }
+}
+@media only screen and (max-width: 600px){
+    #container{
+        height: 83vh;
+    }
+    #forcast{
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 480px;
+    }
+}
+@media only screen and (max-width: 445px){
+    #container{
+        height: 80vh;
+    }
+    #topbar div:nth-of-type(1){
+        margin-left: 2vw;
+    }
+    #topbar div:nth-of-type(2){
+        margin-right: 2vw;
+    }
+    #curw1{
+        margin-left: 1vw;
+    }
+    #curw2{
+        margin-right: 1vw;
+    }
+}
