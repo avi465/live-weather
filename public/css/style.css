@@ -29,13 +29,6 @@ body{
 	background: rgba(255,255,255,0.1);
 	backdrop-filter: blur(5px);
 }
-#container::before{
-    content: "Live Weather";
-    background: rgba(255,255,255,0.05);
-    display: block;
-    color: rgba(21, 255, 0, 0.986);
-    margin-bottom: 2vh;
-}
 
 body::before {
 	content: '';
@@ -119,15 +112,20 @@ body::after {
     margin-right: 2vw;
 
 }
+#curw1 div:nth-of-type(1){
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
 #currentWeater div div:nth-of-type(1){
     text-transform: capitalize;
     font-size: 18px;
-    font-family: monospace;
     font-weight: 100;
 
 }
 #currentWeather div div:nth-of-type(2) {
-    font-size: 30px;
+    font-size: 22px;
 }
 #forcast{
     display: flex;
@@ -142,18 +140,21 @@ body::after {
     display: none;
 }
 
-
 /* footer */
 footer{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
     background: rgba(255,255,255,0.05);
-    border: 2px;
-    padding: 4px;
-    margin-top: 2vh;
+    padding: 4px 16px;
 }
 footer::before{
     content: "Made by Avinash";
-    font-family: monospace;
-    font-weight: 600;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
 }
 hr{
     background-color: white;

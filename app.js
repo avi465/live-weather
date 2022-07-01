@@ -24,8 +24,6 @@ let long = "";
 let myStatus = "";
 let weatherData = [];
 let weatherData1 = [];
-// Put openweathermap api key
-
 
 // Get Requests
 app.get("/", function (req, res) {
