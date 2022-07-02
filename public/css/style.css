@@ -1,86 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 
-    
+
 }
-body{
+
+body {
     background: #161616;
     color: rgb(255, 255, 255);
 }
-#container{
+
+#container {
     position: absolute;
     top: 50%;
     left: 50%;
     z-index: 1;
-    width: 90vw;
-    height: 90vh;
-    padding: 16px;
+    width: fit-content;
+    height: fit-content;
+    padding: 32px 16px 64px 16px;
     overflow: hidden;
     text-align: center;
-	border-radius: 15px;
+    border-radius: 8px;
     transform: translate(-50%, -50%);
-    box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
-	border-top: 1px solid rgba(255,255,255,0.5);
-	border-left: 1px solid rgba(255,255,255,0.5);
-	background: rgba(255,255,255,0.1);
-	backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 body::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(#f00, #f0F);
-	clip-path: circle(30% at  88% 77%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0F);
+    clip-path: circle(30% at 88% 77%);
 }
+
 body::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(#2196f3, #e91e63);
-	clip-path: circle(20% at 15% 15%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 15% 15%);
 }
 
 
-#topbar{
+#topbar {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
+}
+#myStatus{
+    text-align: left;
 }
 
-#location span{
-    color: #8ab4f8;
+#location span {
+    color: #ffffff;
 }
-#location button{
+
+#location button {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #3c4043;
-    padding: 4px;
-    border-radius: 50%;
+    padding: 4px 8px;
+    border-radius: 6px;
     border: none;
     z-index: 1;
 }
-#topbar div:nth-of-type(1){
-    margin-left: 4vw;
-    text-align: left;
-}
-#topbar div:nth-of-type(2){
-    margin-right: 4vw;
-}
-#error{
+
+#error {
     font-family: monospace;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     color: rgba(21, 255, 0, 0.986);
     border-radius: 4px;
     padding: 4px;
@@ -88,123 +90,154 @@ body::after {
 
 
 /* Middle part */
-#middle{
-    margin-top: 20px;
+#middle {
+    margin-top: 16px;
     color: white;
 }
-#currentWeather{
+
+#currentWeather {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-bottom: 16px;
 }
-#curw1{
-    margin-left: 2vw;
-    width: 100px;
-    height: 100px;
+
+#curw1 {
+    width: fit-content;
+    height: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-#curw2{
-    margin-right: 2vw;
-
-}
-#curw1 div:nth-of-type(1){
-    text-align: left;
-    text-transform: capitalize;
-    font-size: 22px;
+    background-color: rgba(22, 22, 22, 0.25);
+    border-radius: 6px;
+    padding: 4px 8px;
 }
 
-#currentWeater div div:nth-of-type(1){
+#curw2 {
+    /* background-color: rgba(22, 22, 22, 0.25); */
+    background-color: rgba(22, 22, 22, 0.1);
+    border-radius: 6px;
+    height: 70px;
+    width: 70px;
+    margin: 0px 8px 0px 8px;
+}
+
+#curw2>img {
+    padding: 4px;
+    height: 70px;
+    width: 70px;
+}
+
+#curw1 div:nth-of-type(1) {
     text-transform: capitalize;
     font-size: 18px;
-    font-weight: 100;
+}
 
+#curw1 div:nth-of-type(2) {
+    text-transform: capitalize;
+    font-size: 18px;
+    text-align: left;
 }
-#currentWeather div div:nth-of-type(2) {
-    font-size: 22px;
-}
-#forcast{
+
+#forcast {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
-    margin-bottom: 2vh;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll;
 }
-#forcast::-webkit-scrollbar{
+
+#forcast::-webkit-scrollbar {
     display: none;
 }
 
+.daily-card {
+    background-color: rgba(22, 22, 22, 0.25);
+    border-radius: 6px;
+    padding: 32px;
+    margin: 0px 4px 0px 4px;
+}
+
 /* footer */
-footer{
+footer {
     position: absolute;
     bottom: 0px;
     left: 50%;
     width: 100%;
     text-align: center;
     transform: translateX(-50%);
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 4px 16px;
 }
-footer::before{
+
+footer::before {
     content: "Made by Avinash";
     font-weight: 400;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
-hr{
+
+hr {
     background-color: white;
     border: none;
 }
 
 
 /* Media queries */
-@media only screen and (min-width: 1040px){
-    #container{
-        width: 67vw;
-        height: 85vh;
+@media only screen and (min-width: 1040px) {}
+
+@media only screen and (min-width: 1150px) {}
+
+@media only screen and (max-width: 900px) {
+    #container {
+        width: 96vw;
     }
-}
-@media only screen and (min-width: 1150px){
-    #container{
-        width: 60vw;
-        height: 85vh;
-    }
-}
-@media only screen and (min-width: 900px){
-    #container{
-        width: 80vw;
-        height: 85vh;
-    }
-}
-@media only screen and (max-width: 600px){
-    #container{
-        height: 83vh;
-    }
-    #forcast{
-        overflow-x: scroll;
-        white-space: nowrap;
-        width: 480px;
-    }
-}
-@media only screen and (max-width: 445px){
-    #container{
-        height: 80vh;
-    }
-    #topbar div:nth-of-type(1){
-        margin-left: 2vw;
-    }
-    #topbar div:nth-of-type(2){
-        margin-right: 2vw;
-    }
+
     #curw1{
-        margin-left: 1vw;
+        height: 50px;
     }
-    #curw2{
-        margin-right: 1vw;
+    #curw2,
+    #curw2>img {
+        height: 60px;
+        width: 60px;
     }
+
+    #curw1 div:nth-of-type(1) {
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+
+    #curw1 div:nth-of-type(2) {
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .daily-card {
+        background-color: rgba(22, 22, 22, 0.25);
+        border-radius: 6px;
+        padding: 16px 16px 16px 16px;
+        margin: 0px 4px 0px 4px;
+    }
+
+    #curw1{
+        height: 50px;
+    }
+    #curw2,
+    #curw2>img {
+        height: 50px;
+        width: 50px;
+    }
+
+    #curw1 div:nth-of-type(1) {
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
+    #curw1 div:nth-of-type(2) {
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
 }
