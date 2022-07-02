@@ -35,7 +35,7 @@ app.get("/", function (req, res) {
                 const object = JSON.parse(data);
                 const icond = object.current.weather[0].icon;
                 const iconn = icond.replace("d", "n");
-                const imgUrl = "http://openweathermap.org/img/wn/";
+                const imgUrl = "https://openweathermap.org/img/wn/";
                 myStatus = "Delhi"
                 weatherData[0] = object.current.weather[0].description;
                 weatherData[1] = Math.round(object.current.temp);
@@ -67,7 +67,7 @@ app.get("/", function (req, res) {
                 const object = JSON.parse(data);
                 const icond = object.current.weather[0].icon;
                 const iconn = icond.replace("d", "n");
-                const imgUrl = "http://openweathermap.org/img/wn/";
+                const imgUrl = "https://openweathermap.org/img/wn/";
                 myStatus = "Local Weather"
                 weatherData[0] = object.current.weather[0].description;
                 weatherData[1] = Math.round(object.current.temp);
