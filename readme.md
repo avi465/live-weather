@@ -12,6 +12,8 @@
 
 **Server:** Node, Express
 
+**API:** Openweather map
+
 
 ## Environment Variables
 
