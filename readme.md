@@ -6,7 +6,7 @@ This is a simple live weather app made using openweather map api.
 
 ## Screenshots
 
-![App Screenshot](https://i.imgur.com/XqQXQZb.png)
+![App Screenshot](https://github.com/avi465/live-weather/blob/master/images/image1.png)
 
 
 ## Run Locally
