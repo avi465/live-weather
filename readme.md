@@ -13,6 +13,13 @@
 **Server:** Node, Express
 
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+
 ## Run Locally
 
 Clone the project
@@ -38,3 +45,8 @@ Start the server
 ```bash
 npm run start
 ```
+
+
+## Authors
+
+- [Avinash Karmjit](https://www.github.com/avi465)
