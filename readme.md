@@ -1,9 +1,16 @@
 
-# Live Weather
+<h1 align = "center">Live Weather</h1>
 
-This is a simple live weather app made using openweather map api.
+<p align = "center">This is a simple live weather app made using openweather map api.</p>
 
 ![App Screenshot](https://github.com/avi465/live-weather/blob/master/images/image1.png)
+
+
+## Tech Stack
+
+**Client:** Html, Css, Javascript
+
+**Server:** Node, Express
 
 
 ## Run Locally
@@ -31,4 +38,3 @@ Start the server
 ```bash
 npm run start
 ```
-
