@@ -1,12 +1,12 @@
 {
-  "name": "mailchimp",
+  "name": "live-weather",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple weather app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "author": "",
+  "author": "Avinash Karmjit",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
