@@ -1,9 +1,11 @@
 
-<h1 align = "center">Live Weather</h1>
+<h1>Live Weather</h1>
 
-<p align = "center">This is a simple live weather app made using openweather map api.</p>
+<p>This is a simple live weather app made using openweather map api.</p>
 
-![App Screenshot](https://github.com/avi465/live-weather/blob/master/images/image1.png)
+## Screenshot
+<img width="800" alt="image1" src="https://user-images.githubusercontent.com/63386918/212116407-10fc4ca1-8b42-4dd1-a294-3ef9edaa1905.png">
+<!--- ![App Screenshot](https://github.com/avi465/live-weather/blob/master/images/image1.png) -->
 
 
 ## Tech Stack
